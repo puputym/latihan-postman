@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "438b8952-52cb-40ad-97e3-e19dc0c1e689",
+		"name": "Latihan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9873736",
+		"_collection_link": "https://interstellar-meadow-752302.postman.co/workspace/Sanbercode~8ff94ee2-5a67-4bb2-9853-ec97e26a198b/collection/9873736-438b8952-52cb-40ad-97e3-e19dc0c1e689?action=share&creator=9873736&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 12,\r\n        \"name\": \"Puput Ym\",\r\n        \"username\": \"py\",\r\n        \"email\": \"py@karina.biz\",\r\n        \"address\": {\r\n            \"street\": \"Kattie py\",\r\n            \"suite\": \"Suite 198\",\r\n            \"city\": \"Lebsackbury\",\r\n            \"zipcode\": \"31428-2261\",\r\n            \"geo\": {\r\n                \"lat\": \"-38.2386\",\r\n                \"lng\": \"57.2232\"\r\n            }\r\n        },\r\n        \"phone\": \"024-648-3804\",\r\n        \"website\": \"ambrose.net\",\r\n        \"company\": {\r\n            \"name\": \"Hoeger LLC\",\r\n            \"catchPhrase\": \"Centralized empowering task-force\",\r\n            \"bs\": \"target end-to-end models\"\r\n        }\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User using Enviroment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post User using enviroment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 12,\r\n        \"name\": \"Puput Ym\",\r\n        \"username\": \"py\",\r\n        \"email\": \"py@karina.biz\",\r\n        \"address\": {\r\n            \"street\": \"Kattie py\",\r\n            \"suite\": \"Suite 198\",\r\n            \"city\": \"Lebsackbury\",\r\n            \"zipcode\": \"31428-2261\",\r\n            \"geo\": {\r\n                \"lat\": \"-38.2386\",\r\n                \"lng\": \"57.2232\"\r\n            }\r\n        },\r\n        \"phone\": \"024-648-3804\",\r\n        \"website\": \"ambrose.net\",\r\n        \"company\": {\r\n            \"name\": \"Hoeger LLC\",\r\n            \"catchPhrase\": \"Centralized empowering task-force\",\r\n            \"bs\": \"target end-to-end models\"\r\n        }\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get using validasi User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Status code is 200\", function () {\r",
+							"//     pm.response.to.have.status(200);\r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Test Name Is Leanne Graham\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData[0].name).to.eql(\"Leanne Graham\");\r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Test Email Is Sincere@april.biz\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData[0].email).to.eql(\"Sincere@april.biz\");\r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Test Email Is Kulas Light\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData[0].address.street).to.eql(\"Kulas Light\");\r",
+							"// });\r",
+							"\r",
+							"try {\r",
+							"    var jsonData = [\r",
+							"        {\r",
+							"            \"id\": 1,\r",
+							"            \"name\": \"Leanne Graham\",\r",
+							"            \"username\": \"Bret\",\r",
+							"            \"email\": \"Sincere@april.biz\",\r",
+							"            \"address\": {\r",
+							"                \"street\": \"Kulas Light\",\r",
+							"                \"suite\": \"Apt. 556\",\r",
+							"                \"city\": \"Gwenborough\",\r",
+							"                \"zipcode\": \"92998-3874\",\r",
+							"                \"geo\": {\r",
+							"                    \"lat\": \"-37.3159\",\r",
+							"                    \"lng\": \"81.1496\"\r",
+							"                }\r",
+							"            },\r",
+							"            \"phone\": \"1-770-736-8031 x56442\",\r",
+							"            \"website\": \"hildegard.org\",\r",
+							"            \"company\": {\r",
+							"                \"name\": \"Romaguera-Crona\",\r",
+							"                \"catchPhrase\": \"Multi-layered client-server neural-net\",\r",
+							"                \"bs\": \"harness real-time e-markets\"\r",
+							"            }\r",
+							"        },\r",
+							"        {\r",
+							"        \"id\": 2,\r",
+							"        \"name\": \"Ervin Howell\",\r",
+							"        \"username\": \"Antonette\",\r",
+							"        \"email\": \"Shanna@melissa.tv\",\r",
+							"        \"address\": {\r",
+							"            \"street\": \"Victor Plains\",\r",
+							"            \"suite\": \"Suite 879\",\r",
+							"            \"city\": \"Wisokyburgh\",\r",
+							"            \"zipcode\": \"90566-7771\",\r",
+							"            \"geo\": {\r",
+							"                \"lat\": \"-43.9509\",\r",
+							"                \"lng\": \"-34.4618\"\r",
+							"            }\r",
+							"        },\r",
+							"        \"phone\": \"010-692-6593 x09125\",\r",
+							"        \"website\": \"anastasia.net\",\r",
+							"        \"company\": {\r",
+							"            \"name\": \"Deckow-Crist\",\r",
+							"            \"catchPhrase\": \"Proactive didactic contingency\",\r",
+							"            \"bs\": \"synergize scalable supply-chains\"\r",
+							"        }\r",
+							"    },\r",
+							"        // ...Tambahkan data lainnya di sini...\r",
+							"    ];\r",
+							"\r",
+							"    // Melakukan pengujian terhadap data\r",
+							"    pm.test(\"API Data Test\", function() {\r",
+							"        // Melakukan pengujian jumlah data\r",
+							"        //pm.expect(jsonData[0].address.street).to.eql(\"Kulas Light\");\r",
+							"       let leng = pm.expect(jsonData.length).to.be.above(0);\r",
+							"\r",
+							"       //masih ragu\r",
+							"        // for (let i =0; i<=leng; i++){\r",
+							"        //     pm.expect(jsonData[i].id).to.equal(i);\r",
+							"        //     pm.expect(jsonData[i].name).to.equal(i);\r",
+							"        //     pm.expect(jsonData[i].address).to.equal(i);\r",
+							"        //     pm.expect(jsonData[i].address.street).to.equal(i);\r",
+							"        // }\r",
+							"\r",
+							"        // Melakukan pengujian pada setiap objek data\r",
+							"        jsonData.forEach(function(data) {\r",
+							"            pm.expect(data.id).to.be.a(\"number\");\r",
+							"            pm.expect(data.name).to.be.a(\"string\");\r",
+							"            pm.expect(data.username).to.be.a(\"string\");\r",
+							"            pm.expect(data.email).to.be.a(\"string\");\r",
+							"            pm.expect(data.address.street).to.be.a(\"string\");\r",
+							"            pm.expect(data.company.name).to.be.a(\"string\");\r",
+							"            //pm.expect(jsonData[0].address.street).to.eql(\"Kulas Light\");\r",
+							"            // Lanjutkan pengujian untuk properti lainnya\r",
+							"        });\r",
+							"    });\r",
+							"\r",
+							"    console.log(\"API data test passed.\");\r",
+							"} catch (ex) {\r",
+							"    console.log(ex.name + \" \" + ex.message);\r",
+							"}\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
