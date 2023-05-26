@@ -5,3 +5,12 @@
 5. input "npm install -g newman"
 6. arahkan ke directori tempat test postman di export tadi (ex: C:\Users\puput\Documents\QA\Postman\Latihan)
 7. newman run Latihan.postman_collection.json -e url.postman_environment.json
+
+
+echo "# latihan-postman" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/puputym/latihan-postman.git
+git push -u origin main
